@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: rgb(212, 207, 207);
 }
@@ -11,11 +12,12 @@ body {
     color: white;
     text-align: center;
 }
+
 header {
     background-color: #F6D4F5;
 }
 
-   
+
 .left {
     float: left;
 }
@@ -23,9 +25,11 @@ header {
 .right {
     float: right;
 }
-div.container{
+
+div.container {
     margin: 0 20rem;
 }
+
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -42,25 +46,26 @@ nav a:hover {
     color: white;
     transition: all 0.1s ease 0s;
 }
-#slider{
+
+#slider {
     background-color: white;
-    /* width: 100%; */
     position: relative;
     padding: 1rem;
 }
-#slider img{
-    background-color: white;
-    width: 100%; 
-    /* border: 5px solid white; */
+
+#slider img {
+    width: 100%;
 }
-#slider h2{
+
+#slider h2 {
     padding: 1rem;
-    background-color:rgba(246, 212, 245,50%);
+    background-color: rgba(246, 212, 245, 50%);
     position: absolute;
     left: 2rem;
     top: 2rem;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,8 +73,7 @@ main{
     padding-top: 2rem;
     padding-bottom: 2rem;
     gap: 2rem;
-    width:80%;
-    border: 2px red solid;
+    width: 80%;
 }
 
 #select {
@@ -80,27 +84,30 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-    
+
 }
-#select h1{
+
+#select h1 {
     position: absolute;
     left: 1rem;
     top: 0.5rem;
 }
-.escarpin{
+
+.escarpin {
     margin-top: 4rem;
     align-self: flex-end;
     padding: 1rem;
 }
 
-#select:hover .escarpin{
+#select:hover .escarpin {
     opacity: 0.5;
 }
-#select .escarpin:hover{
+
+#select .escarpin:hover {
     opacity: 1;
 }
 
-#news{
+#news {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -112,24 +119,30 @@ main{
     padding-inline: 1rem;
     padding-top: 1rem;
 }
-#new h2{
-    background-color:#EA32C4 ;
+
+#new h2 {
+    background-color: #EA32C4;
     padding: 0.5rem;
 }
-#best h2{
-    background-color:#92BE44;
+
+#best h2 {
+    background-color: #92BE44;
     padding: 0.5rem;
 }
-#crush h2{
-    background-color:#0099B1 ;
+
+#crush h2 {
+    background-color: #0099B1;
     padding: 0.5rem;
 }
+
 #info {
     background-color: #ac8aaa;
     display: flex;
-    justify-content: space-evenly;
-    /* gap: 2rem; */
+    justify-content: space-around;
+    padding: 1rem 0;
+    font-size: 1.5rem;
 }
+
 #bottombar {
     background-color: #F6D4F5;
     display: flex;
@@ -141,16 +154,75 @@ main{
     flex-direction: column;
     align-items: center;
 }
-ul{
+
+ul {
     padding-top: 1rem;
 }
+
 li {
     list-style-type: none;
     text-align: center;
 }
-@media (max-width:640px){
 
-    nav ,#select ,#news,#info,#bottombar{
+@media (max-width:640px) {
+
+    header img {
+        width: 100%;
+    }
+
+    div.container {
+        margin: 0;
+    }
+
+    #cart {
+        display: none;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    nav, #select, #news, #info,#bottombar {
         flex-direction: column;
     }
+    #slider h2{
+        position: static;
+    }
+    #slider img{
+        padding-top: 0.7rem;
+    }
+    #select h1{
+        position: static;
+        /* text-align: center; */
+    }
+    #select{
+        /* border:0.5rem solid red; */
+        text-align: center;
+    }
+    .escarpin{
+        margin-top: 0;
+        align-self:center;
+
+    }
+    
+    #news{
+        align-items: center;
+        text-align: center;
+    }
+    #news article {
+        width: 100%;
+        padding-inline: 0;
+    }
+    #info{
+        align-items: center;
+    }
+    #info article{
+        padding-block: 1rem;
+    }
+    
 }
